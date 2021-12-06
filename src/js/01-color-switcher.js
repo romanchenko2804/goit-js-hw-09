@@ -17,13 +17,13 @@ const colorChanger = {
       bodyBGColorChanger();
     }, 1000);
 
-    refs.start.setAttribute('disabled', 'disabled');
+    refs.start.disabled = true;
   },
 
   stop() {
     clearInterval(this.intervalId);
     this.isActive = false;
-    refs.start.removeAttribute('disabled');
+    refs.start.disabled = false;
   },
 };
 

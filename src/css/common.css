@@ -16,3 +16,45 @@ img {
   display: block;
   max-width: 100%;
 }
+
+#datetime-picker {
+  text-align: center;
+  border: solid #000 3px;
+  border-radius: 10px;
+  padding: 20px 0;
+  margin-right: 40px;
+  font-size: 1.5em;
+}
+
+button[data-start] {
+  padding: 15px 25px;
+  border: solid rgb(131, 133, 8) 3px;
+  border-radius: 10px;
+  background-color: rgb(255, 251, 0);
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  background-color: rgb(0, 76, 240);
+}
+
+.field {
+  font-weight: bold;
+}
+.field .value {
+  font-size: 3em;
+  color: #f6fa00;
+}
+
+.field .label {
+  color: #00c0e2;
+}
+
+.field:not(:last-child) {
+  margin-right: 40px;
+}
