@@ -11,6 +11,7 @@ const refs = {
 };
 
 let intervalId = null;
+refs.start.disabled = true;
 
 const options = {
   enableTime: true,
@@ -23,8 +24,8 @@ const options = {
     if (selectedDates[0] < new Date()) {
       refs.start.disabled = true;
       alert('Please choose a date in the future! Do not look back..');
-    } else {
-      clearInterval(intervalId);
+    }
+    if (selectedDates[0] > new Date()) {
       refs.start.disabled = false;
     }
 
@@ -32,7 +33,7 @@ const options = {
       intervalId = setInterval(() => {
         const differenceInTime = selectedDates[0] - new Date();
 
-        if (differenceInTime < 0) {
+        if (differenceInTime < 1000) {
           clearInterval(intervalId);
         }
         const result = convertMs(differenceInTime);

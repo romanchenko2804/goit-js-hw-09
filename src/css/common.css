@@ -32,7 +32,16 @@ button[data-start] {
   border-radius: 10px;
   background-color: rgb(255, 251, 0);
   font-size: 1em;
-  font-weight: bold;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+button[data-stop] {
+  padding: 15px 25px;
+  border: solid rgb(131, 133, 8) 3px;
+  border-radius: 10px;
+  background-color: rgb(255, 0, 0);
+  font-size: 1em;
+  font-weight: 900;
   text-transform: uppercase;
 }
 
