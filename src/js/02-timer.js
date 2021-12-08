@@ -1,5 +1,6 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
+import Notiflix from 'notiflix';
 
 const refs = {
   input: document.querySelector('#datetime-picker'),
@@ -23,7 +24,7 @@ const options = {
 
     if (selectedDates[0] < new Date()) {
       refs.start.disabled = true;
-      alert('Please choose a date in the future! Do not look back..');
+      Notiflix.Notify.failure('Please choose a date in the future! Do not look back..');
     }
     if (selectedDates[0] > new Date()) {
       refs.start.disabled = false;
