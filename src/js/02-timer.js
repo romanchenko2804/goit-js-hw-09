@@ -25,6 +25,7 @@ const options = {
     if (selectedDates[0] < new Date()) {
       refs.start.disabled = true;
       Notiflix.Notify.failure('Please choose a date in the future! Do not look back..');
+      return;
     }
     if (selectedDates[0] > new Date()) {
       refs.start.disabled = false;
